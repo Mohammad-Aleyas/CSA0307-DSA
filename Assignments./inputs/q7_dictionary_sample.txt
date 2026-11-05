@@ -1,0 +1,10 @@
+apple
+apply
+apt
+banana
+band
+bandit
+cat
+cater
+dog
+dove
