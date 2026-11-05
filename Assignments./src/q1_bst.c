@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+typedef struct N{int k;struct N*l,*r;}N;
+N*ins(N*t,int k){if(!t){N*n=calloc(1,sizeof *n);n->k=k;return n;}if(k<t->k)t->l=ins(t->l,k);else if(k>t->k)t->r=ins(t->r,k);return t;}
+int h(N*t){if(!t)return -1;int a=h(t->l),b=h(t->r);return 1+(a>b?a:b);}int find(N*t,int k,int*c){*c=0;while(t){(*c)++;if(k==t->k)return 1;t=k<t->k?t->l:t->r;}return 0;}
+N*min(N*t){while(t&&t->l)t=t->l;return t;}N*del(N*t,int k){if(!t)return NULL;if(k<t->k)t->l=del(t->l,k);else if(k>t->k)t->r=del(t->r,k);else if(t->l&&t->r){N*s=min(t->r);t->k=s->k;t->r=del(t->r,s->k);}else{N*c=t->l?t->l:t->r;free(t);return c;}return t;}
+void pre(N*t){if(t){printf("%d ",t->k);pre(t->l);pre(t->r);}}void in(N*t){if(t){in(t->l);printf("%d ",t->k);in(t->r);}}void post(N*t){if(t){post(t->l);post(t->r);printf("%d ",t->k);}}void save(N*t,FILE*f){if(t){fprintf(f,"%d\n",t->k);save(t->l,f);save(t->r,f);}}void freeall(N*t){if(t){freeall(t->l);freeall(t->r);free(t);}}
+int main(void){int a[]={500,300,700,200,400,600,800,350},c;N*r=NULL,*s=NULL;for(int i=0;i<8;i++)r=ins(r,a[i]);int sorted[]={10,20,30,40,50,60,70,80};for(int i=0;i<8;i++)s=ins(s,sorted[i]);printf("sample inorder: ");in(r);printf("\ntraversals pre/in/post: ");pre(r);printf(" | ");in(r);printf(" | ");post(r);printf("\n");find(r,350,&c);printf("search 350 comparisons=%d\n",c);r=del(r,200);printf("delete leaf 200: ");pre(r);puts("");r=del(r,300);printf("delete one-child node 300: ");pre(r);puts("");r=del(r,500);printf("delete two-child node 500: ");pre(r);puts("");
+#define NKEY 2000
+int *v=malloc(NKEY*sizeof(int));for(int i=0;i<NKEY;i++)v[i]=i+1;unsigned seed=42;for(int i=NKEY-1;i>0;i--){seed=1664525*seed+1013904223;int j=(int)(seed%(i+1));int z=v[i];v[i]=v[j];v[j]=z;}N*random=NULL,*ordered=NULL;for(int i=0;i<NKEY;i++){random=ins(random,v[i]);ordered=ins(ordered,i+1);}long total=0;for(int i=0;i<NKEY;i++){find(random,i+1,&c);total+=c;}printf("2000-key experiment: random height=%d, sorted height=%d, random average successful comparisons=%.2f\n",h(random),h(ordered),(double)total/NKEY);FILE*f=fopen("outputs/bst_preorder.txt","w");if(f){save(random,f);fclose(f);puts("saved preorder to outputs/bst_preorder.txt");}puts("duplicate 500 ignored; empty-tree search safely returns missing");free(v);freeall(r);freeall(s);freeall(random);freeall(ordered);return 0;}
