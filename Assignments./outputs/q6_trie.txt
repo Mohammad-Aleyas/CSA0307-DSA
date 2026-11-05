@@ -1,0 +1,4 @@
+a:5 an:4 anu:2 b:1 z:0 
+autocomplete 'an': anand anitha anu anusuya 
+search anu: found
+delete anu: success; prefix anu count=1

@@ -1,0 +1,9 @@
+sample inorder: 200 300 350 400 500 600 700 800 
+traversals pre/in/post: 500 300 200 400 350 700 600 800  | 200 300 350 400 500 600 700 800  | 200 350 400 300 600 800 700 500 
+search 350 comparisons=4
+delete leaf 200: 500 300 400 350 700 600 800 
+delete one-child node 300: 500 400 350 700 600 800 
+delete two-child node 500: 600 400 350 700 800 
+2000-key experiment: random height=20, sorted height=1999, random average successful comparisons=12.46
+saved preorder to outputs/bst_preorder.txt
+duplicate 500 ignored; empty-tree search safely returns missing

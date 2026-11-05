@@ -1,0 +1,9 @@
+BST inorder: 200 300 350 400 500 600 700 800 
+BST traversals (pre/in/post/level):
+500 300 200 400 350 700 600 800 
+200 300 350 400 500 600 700 800 
+200 350 400 300 600 800 700 500 
+500 300 700 200 400 600 800 350 
+height: random order 3, sorted order 7
+comparisons: 4 and 8
+after deletions: 600 400 350 700 800 

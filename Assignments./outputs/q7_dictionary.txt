@@ -1,0 +1,5 @@
+exact 'band': found
+exact 'bad': missing
+alphabetical range [banana..cat]: banana band bandit cat 
+autocomplete 'ba': banana band bandit 
+verified dictionary words=10

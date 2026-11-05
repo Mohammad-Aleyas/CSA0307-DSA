@@ -1,0 +1,8 @@
+Red-black tree after each insertion (inorder key/color):
+insert 10: 10(B) | properties PASS
+insert 20: 10(B) 20(R) | properties PASS
+insert 30: 10(R) 20(B) 30(R) | properties PASS
+insert 15: 10(B) 15(R) 20(B) 30(B) | properties PASS
+insert 25: 10(B) 15(R) 20(B) 25(R) 30(B) | properties PASS
+insert 5: 5(R) 10(B) 15(R) 20(B) 25(R) 30(B) | properties PASS
+Minimum process key: 5
