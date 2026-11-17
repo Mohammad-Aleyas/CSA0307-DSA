@@ -1,8 +1,0 @@
-Source: Task03/triage_heap.c
-Compile exit code: 0
-Compiler diagnostics:
-
-Execution exit code: 0
-Execution output:
-P102(9) P106(8) P104(7) P103(5) P101(3) P105(1) 
-
