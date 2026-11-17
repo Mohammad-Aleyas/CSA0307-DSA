@@ -1,0 +1,8 @@
+Source: Task02/linear_probe_prediction.c
+Compile exit code: 0
+Compiler diagnostics:
+
+Execution exit code: 0
+Execution output:
+42@2(1) 17@7(1) 52@3(2) 27@8(2) 99@9(1) 62@4(3) 
+
