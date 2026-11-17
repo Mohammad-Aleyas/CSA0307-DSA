@@ -1,8 +1,0 @@
-Source: Task05/parallel_merge.c
-Compile exit code: 0
-Compiler diagnostics:
-
-Execution exit code: 0
-Execution output:
-n=100000 threads=2 seconds=0.004785 sorted=yes
-
