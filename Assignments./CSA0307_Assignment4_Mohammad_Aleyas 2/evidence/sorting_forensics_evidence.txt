@@ -1,0 +1,18 @@
+Source: Task04/sorting_forensics.c
+Compile exit code: 0
+Compiler diagnostics:
+/mnt/data/CSA0307_Assignment4_Mohammad_Aleyas/Task04/sorting_forensics.c: In function ‘main’:
+/mnt/data/CSA0307_Assignment4_Mohammad_Aleyas/Task04/sorting_forensics.c:14:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+   14 |     for(int k=0;k<n;k++)printf("%d ",a[k]);printf("| pivot at %d, swaps %d\n",i+1,swaps);
+      |     ^~~
+/mnt/data/CSA0307_Assignment4_Mohammad_Aleyas/Task04/sorting_forensics.c:14:44: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   14 |     for(int k=0;k<n;k++)printf("%d ",a[k]);printf("| pivot at %d, swaps %d\n",i+1,swaps);
+      |                                            ^~~~~~
+
+Execution exit code: 0
+Execution output:
+2 4 3 5 9 8 7 | pivot at 3, swaps 3
+sorted quicksort: comparisons=49995000 max_recursion_depth=10000
+reverse quicksort: comparisons=49995000 max_recursion_depth=10000
+merge sort random: comparisons=120433
+

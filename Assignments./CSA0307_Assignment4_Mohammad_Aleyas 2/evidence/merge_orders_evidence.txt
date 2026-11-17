@@ -1,0 +1,16 @@
+Source: Task05/merge_orders.c
+Compile exit code: 0
+Compiler diagnostics:
+/mnt/data/CSA0307_Assignment4_Mohammad_Aleyas/Task05/merge_orders.c: In function ‘merge’:
+/mnt/data/CSA0307_Assignment4_Mohammad_Aleyas/Task05/merge_orders.c:7:5: warning: this ‘while’ clause does not guard... [-Wmisleading-indentation]
+    7 |     while(i<=mid)tmp[k++]=a[i++];while(j<=hi)tmp[k++]=a[j++];
+      |     ^~~~~
+/mnt/data/CSA0307_Assignment4_Mohammad_Aleyas/Task05/merge_orders.c:7:34: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+    7 |     while(i<=mid)tmp[k++]=a[i++];while(j<=hi)tmp[k++]=a[j++];
+      |                                  ^~~~~
+
+Execution exit code: 0
+Execution output:
+#2:120 #5:120 #6:300 #8:300 #1:450 #3:450 #7:780 #4:990 
+comparisons = 15
+
