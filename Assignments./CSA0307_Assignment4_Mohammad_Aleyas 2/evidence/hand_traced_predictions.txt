@@ -1,9 +1,0 @@
-TASK 2 linear probing prediction:
-42@2(1) 17@7(1) 52@3(2) 27@8(2) 99@9(1) 62@4(3)
-TASK 3 min-heap build prediction:
-1 4 2 9 8 7 6
-TASK 4 partition prediction:
-2 4 3 5 9 8 7 | pivot at 3, swaps 3
-TASK 5 stable merge prediction:
-#2:120 #5:120 #6:300 #8:300 #1:450 #3:450 #7:780 #4:990
-comparisons = 15
